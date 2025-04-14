@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clothing | DealMart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffefc;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e56717;
+    }
+
+    .center-area {
+      flex: 1;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 0.5rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .logout-btn {
+      background-color: #e56717;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .item {
+      background: #f6f6f6;
+      border-radius: 15px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .item img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .item h3 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .item p {
+      margin: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">DealMart</div>
+    
+    <div class="center-area">
+      <div class="search-bar">
+        <input type="search" placeholder="Search">
+      </div>
+    </div>
+
+    <div>
+      <a href="login.html" class="logout-btn">Log Out</a>
+    </div>
+  </header>
+
+  <h1>Clothing</h1>
+  <div class="grid">
+    <div class="item">
+      <img src="https://img.icons8.com/color/100/t-shirt.png" alt="T-shirt">
+      <h3>T-shirt</h3>
+      <p>$699</p>
+    </div>
+    <div class="item">
+      <img src="https://img.icons8.com/color/100/hoodie.png" alt="Hoodie">
+      <h3>Hoodie</h3>
+      <p>$699</p>
+    </div>
+    <div class="item">
+      <img src="https://img.icons8.com/color/100/sweater.png" alt="Sweater">
+      <h3>Sweater</h3>
+      <p>$499</p>
+    </div>
+    <div class="item">
+      <img src="https://img.icons8.com/color/100/dress.png" alt="Dress">
+      <h3>Dress</h3>
+      <p>$499</p>
+    </div>
+    <div class="item">
+      <img src="https://img.icons8.com/color/100/jacket.png" alt="Jacket">
+      <h3>Jacket</h3>
+      <p>$499</p>
+    </div>
+  </div>
+
+</body>
+</html>

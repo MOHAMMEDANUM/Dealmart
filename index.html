@@ -4,9 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DealMart</title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
+    <link rel="icon" href="./assets/photo/icon.png">
+    <link rel="stylesheet" href="F:\PROJECTS\Dealmart\style.css">
+    </head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fffefc;
+  }
+  header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e56717;
+  }
+  .search-bar input {
+    width: 300px;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  .banner {
+    background: #ffedc4;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    margin: 1rem;
+  }
+  .banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .banner button {
+    padding: 0.6rem 1.5rem;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .section {
+    padding: 1rem;
+  }
+  .section h2 {
+    margin-bottom: 1rem;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card {
+    background: #f6f6f6;
+    border-radius: 15px;
+    padding: 1rem;
+    flex: 1 1 150px;
+    text-align: center;
+  }
+  .card img {
+    max-width: 80px;
+    height: auto;
+  }
+  .product, .restaurant {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 180px;
+  }
+  .product img, .restaurant img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+  .stars {
+    color: gold;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .nav-buttons a {
+      text-decoration: none;
+      background-color: #e56717;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+    .button {
+      
+      border: solid black 1 px;
+      border-radius: 5px;
+      margin-left: 5px;
+      background-color: #e56717;
+    }
+
+    .button a {
+      color: white;
+    }
+    </style>
+    <body>
     
-</body>
-</html>
+    <header>
+      <div class="logo">DealMart</div>
+
+      <div class="center-area">
+      <div  class="search-bar">
+        <input style="align-content: center;" type="search" placeholder="Search">
+      </div>
+      </div>
+      <div class="nav-buttons">
+        <a href="login.html">Log Out</a>
+      </div>
+
+    </header>
+    
+    <div class="banner">
+      <h1>Super Sale</h1>
+      <p>Up to 50% off</p>
+      <button><a href="#s" style="color:white ;">Shop Now</a></button>
+    </div>
+    
+    <div class="section">
+      <h2 id="s">Shop by Category</h2>
+      <div class="grid">
+        <div class="card">
+            <img src="https://img.icons8.com/ios/100/laptop.png" alt="Electronics"><br>
+            <a href="electronics.html">Electronics</a> 
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios/100/t-shirt.png" alt="Clothing"><br>
+            <a href="Clothing.html">Clothing</a> 
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios/100/microwave.png" alt="Home & Kitchen"><br>
+            <a href="Home & Kitchen.html">Home & Kitchen</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios/100/olympic-rings.png" alt="Sports"><br>
+            <a href="Sports.html">Sports</a></div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Food Delivery</h2>
+      <div class="grid">
+        <div class="restaurant">
+            <img src="https://img.icons8.com/ios/100/broccoli.png" alt="Veg"><br>
+            <a href="Veg.html">Vegetarian</a>
+        </div>
+        <div class="restaurant">
+            <img src="https://img.icons8.com/ios/100/thanksgiving.png" alt="Non-Veg"><br>
+            <a href="Non-Veg.html">Non-Vegetarian</a>
+        </div>
+        <div class="restaurant">
+            <img src="https://img.icons8.com/ios/100/pizza.png" alt=""><br>
+            <a href="Intalian.html">Italian</a>
+        </div>
+        <div class="restaurant">
+            <img src="https://img.icons8.com/ios/100/sushi.png" alt=""><br>
+            <a href="Chinese.html">Chinese</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <div class="product">
+          <img src="https://img.icons8.com/ios/100/airpods-pro.png" alt=""><br>
+          <a href="./electronics.html#head">Wireless Headphones</a><br>
+        </div>
+        <div class="product">
+          <img src="https://img.icons8.com/ios/100/apple-watch-apps.png" alt=""><br>
+          <a href="./electronics.html#sw">Smartwatch</a><b></b><br>
+
+        </div>
+        <div class="product">
+          <img src="https://img.icons8.com/ios/100/t-shirt.png" alt=""><br>
+          <a href="./Clothing.html#shi">Casual Shirt</a>
+        </div>
+        <div class="product">
+          <img src="https://img.icons8.com/ios/100/shoes.png" alt=""><br>
+          <a href="./Clothing.html#sh">Sneakers</a><br>
+        </div>
+      </div>
+    </div>
+    <button class="button"><a href="">Top ^</a></button>
+    </body>
+    </html>
+    
