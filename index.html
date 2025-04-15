@@ -109,8 +109,10 @@
       
       border: solid black 1 px;
       border-radius: 5px;
-      margin-left: 5px;
+      margin-left: 15px;
       background-color: #e56717;
+      
+
     }
 
     .button a {
@@ -124,7 +126,13 @@
 
       <div class="center-area">
       <div  class="search-bar">
-        <input style="align-content: center;" type="search" placeholder="Search">
+        <input style="align-content: center;" list="categories" type="search" placeholder="Search">
+        <datalist id="categories">
+          <option value="Electronics"></option>
+          <option value="Clothing"></option>
+          <option value="Home & Kitchen"></option>
+          <option value="Sports"></option>
+        </datalist>
       </div>
       </div>
       <div class="nav-buttons">
@@ -204,7 +212,7 @@
         </div>
       </div>
     </div>
-    <button class="button"><a href="">Top ^</a></button>
+    <button class="button"><a href="">Top ^</a></button><br><br>
     </body>
     </html>
     
