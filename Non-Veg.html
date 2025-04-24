@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Non-Veg | DealMart</title>
+  <link rel="icon" href="./assets/photo/icon.png">
   <style>
     /* same styles as before */
     body {
@@ -77,6 +78,35 @@
       border-radius: 20px;
       font-size: 1rem;
     }
+    #atc {
+        background-color: #e56717;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+    }
+    #atc:hover {
+        background-color:white;
+        color:#e56717 ;
+        border: 1px solid #e56717;
+    }
+    #bn {
+        background-color: #ff9100;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;    
+    }
+    #bn:hover {
+        background-color:white;
+        color:#ff9100 ;
+        border: 1px solid #ff9100 ;
+    }
   </style>
 </head>
 <body>
@@ -98,22 +128,30 @@
   <div class="product">
     <img src="https://via.placeholder.com/200x220/cc0000/ffffff?text=Chicken+Tikka" alt="Chicken Tikka">
     <p>Chicken Tikka</p>
-    <div class="price">$9</div>
+    <div class="price">$9</div><br>
+    <button id="atc">Add to Cart</button><br><br>
+    <button id="bn">Buy Now</button>
   </div>
   <div class="product">
     <img src="https://via.placeholder.com/200x220/8b0000/ffffff?text=Mutton+Curry" alt="Mutton Curry">
     <p>Mutton Curry</p>
-    <div class="price">$12</div>
+    <div class="price">$12</div><br>
+    <button id="atc">Add to Cart</button><br><br>
+    <button id="bn">Buy Now</button>
   </div>
   <div class="product">
     <img src="https://via.placeholder.com/200x220/ff6347/ffffff?text=Grilled+Chicken" alt="Grilled Chicken">
     <p>Grilled Chicken</p>
-    <div class="price">$10</div>
+    <div class="price">$10</div><br>
+    <button id="atc">Add to Cart</button><br><br>
+    <button id="bn">Buy Now</button>
   </div>
   <div class="product">
     <img src="https://via.placeholder.com/200x220/5c4033/ffffff?text=Fish+Fry" alt="Fish Fry">
     <p>Fish Fry</p>
-    <div class="price">$8</div>
+    <div class="price">$8</div><br>
+    <button id="atc">Add to Cart</button><br><br>
+    <button id="bn">Buy Now</button>
   </div>
 </div>
 
