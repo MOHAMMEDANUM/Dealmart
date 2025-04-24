@@ -105,19 +105,54 @@
       border-radius: 20px;
       font-size: 1rem;
     }
+    .nav-buttons a:hover {
+      border: solid #e56717 1px;
+      background-color: white;
+      color: #e56717;
+      transform: scale(1.05);
+    }
     .button {
       
-      border: solid black 1 px;
-      border-radius: 5px;
+      border: #e56717 1px solid;
+      border-radius: 5px ;
       margin-left: 15px;
       background-color: #e56717;
-      
-
+      padding: 0.5rem 1rem;
+    }
+    .button:hover {
+      background-color: white;
+      border: solid #e56717 1px;
+      color: #e56717;
+      transform: scale(1.05);
     }
 
     .button a {
       color: white;
     }
+    .button:hover a {
+      color: #e56717;
+    }
+    #as {
+      background-color: #ff7043;
+      color: white;
+      transition: all 0.3s;
+
+    }
+    #as:hover {
+      background-color:white ;
+      color: #e56717;
+      transform: scale(1.05);
+      border: solid #e56717 1px;
+    }
+    #as a {
+      color: white;
+      text-decoration: none;
+    }
+    #as:hover a {
+      
+      color: #e56717;
+    }
+    
     </style>
     <body>
     
@@ -144,7 +179,7 @@
     <div class="banner">
       <h1>Super Sale</h1>
       <p>Up to 50% off</p>
-      <button><a href="#s" style="color:white ;">Shop Now</a></button>
+      <button id="as"><a href="#s">Shop Now</a></button>
     </div>
     
     <div class="section">
@@ -181,7 +216,7 @@
         </div>
         <div class="restaurant">
             <img src="https://img.icons8.com/ios/100/pizza.png" alt=""><br>
-            <a href="Intalian.html">Italian</a>
+            <a href="Italian.html">Italian</a>
         </div>
         <div class="restaurant">
             <img src="https://img.icons8.com/ios/100/sushi.png" alt=""><br>
@@ -237,7 +272,7 @@
         <div style="flex: 1 1 250px; margin: 0rem;">
           <h3>Quick Links</h3>
           <p><a href="electronics.html" style="color: white; text-decoration: none;">Electronics</a></p>
-          <p><a href="home-kitchen.html" style="color: white; text-decoration: none;">Home & Kitchen</a></p>
+          <p><a href="Home & Kitchen.html" style="color: white; text-decoration: none;">Home & Kitchen</a></p>
           <p><a href="clothing.html" style="color: white; text-decoration: none;">Clothing</a></p>
         </div>
     
