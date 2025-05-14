@@ -152,7 +152,7 @@
     
    /* index end */
 
-   /* SmartPhones */
+   /* Sections */
  
  body {
       font-family: Arial, sans-serif;
@@ -276,4 +276,74 @@
 
     }
 
-     /* SmartPhones end */
+     /* Sections end */
+
+     /* Login */
+
+     .login-1{
+      font-family: Arial, sans-serif;
+      background-color: #fffefc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo-1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e56717;
+      margin-bottom: 1rem;
+    }
+
+    .login-container-1 {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+     .login-container-1 h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .login-container-1 label {
+      display: block;
+      margin: 0.8rem 0 0.2rem;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .login-container-1 button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #e56717;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-container-1 button:hover {
+      background-color: #c9520f;
+      transform: scale(1.05);
+    }
+
+     /* Login end */
