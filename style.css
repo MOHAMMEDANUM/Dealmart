@@ -210,7 +210,9 @@
       border-radius: 15px;
       padding: 1rem;
       text-align: center;
+      
     }
+
 
     .product img {
       width: 100%;
@@ -228,6 +230,7 @@
     .price {
       color: #000;
       font-size: 1.1rem;
+      margin-top: 1rem;
     }
     .nav-buttons a {
       text-decoration: none;
@@ -372,7 +375,7 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 20px auto;
+      margin: 30px 20px;
 
     }
 
