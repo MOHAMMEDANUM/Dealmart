@@ -206,10 +206,18 @@
     }
 
     .product {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-columns: 1fr;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       background: #fff;
       border-radius: 15px;
       padding: 1rem;
       text-align: center;
+      border: 1px solid #de854d;
+      cursor: pointer;
+
+    
       
     }
 
@@ -228,9 +236,16 @@
     }
 
     .price {
-      color: #000;
+      color: white;
       font-size: 1.1rem;
       margin-top: 1rem;
+      background-color:#e56717;
+      padding: 0.5rem 0;
+      border-radius: 15px;
+      width: 70%;
+      margin-left: 15%;
+      
+
     }
     .nav-buttons a {
       text-decoration: none;
