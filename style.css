@@ -358,3 +358,22 @@
     }
 
      /* Login end */
+
+
+     /* Add to Cart Start */
+
+    .add-to-cart{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: bisque;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+
+    }
+
+     /* Add to Cart End */
