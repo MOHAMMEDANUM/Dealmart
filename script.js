@@ -1,34 +1,37 @@
 // Add to cart functionality
 
 let addToCartButtons = document.querySelectorAll('.add-to-cart');
-let addToCartPrice = document.querySelector("#price-added");
-console.log(addToCartPrice.innerHTML);
+let addToCartName = document.getElementById("name-added");
+let addToCartPrice = document.getElementById("price-added");
+let addToCartButton=document.getElementById("atc")
+
+
 
 
 // Function to add items to the cart for xiomi13
-let xiomi13 = document.querySelector('#xiomi13');
-let addToCartXiomi13 = document.querySelector('.atc-xiomi13');
-let priceOfXiomi13=document.querySelector("#price");
-console.log(priceOfXiomi13.innerHTML);
+let imgs = document.getElementById("")
+let names = document.getElementById("name")
+let prices =document.getElementById("price")
 
+// Add to cart array
 
+const addToCart = [
 
-
+    {
+        name  : names.innerText,
+        price :  prices.innerText,
+    }
+]
 
 
 
 let cartFunctionXiomi13 = () => {
-
     console.log("dhasjhbkjdb");
     
-window.location.href = 'F:/WEB PROJECTS/Dealmart/AddToCart.html';
-addTOCartPrice.innerHTML=priceOfXiomi13.innerHTML
-
-    
-addToCartButtons=addToCartXiomi13
-console.log(addToCartButtons);
-
-
+    addToCartName.innerText=names.innerText
+    addToCartPrice.innerText=prices.innerText
 }
-addToCartXiomi13.addEventListener('click', cartFunctionXiomi13);
+addToCartButton.addEventListener('click',cartFunctionXiomi13);
+
+
 
