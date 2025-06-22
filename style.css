@@ -222,10 +222,6 @@
       
       /* transition: transform 0.3s, box-shadow 0.3s; */
     }
-    /* .product:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    } */
 
 
     .product img {
@@ -252,12 +248,13 @@
       margin-left: 15%;
 
     }
-    /* .price:hover {
-      background-color: #ffffff;
-      transform: scale(1.05);
-      color: #e56717;
-      border: solid #e56717 1px;
-    } */
+
+    #add{
+            display: none;
+            margin-left:115px;
+            cursor: pointer;
+
+    }
     
     .nav-buttons a {
       text-decoration: none;
@@ -403,7 +400,8 @@
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin: 30px 20px;
-
     }
 
      /* Add to Cart End */
+
+     
