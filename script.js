@@ -40,7 +40,7 @@ const grid = document.querySelector(".grid");
 
 const addBtn = document.querySelector("#add") 
 
-let xiaomiPhones = [
+let xiaomiPhones = JSON.parse(localStorage.getItem("xiaomiPhonesProducts")) || [
 
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
@@ -101,7 +101,7 @@ function displayxiaomiPhonesProduct (ele,index){
         prices.innerHTML=price
 
         let addtocart=document.createElement("button")
-        addtocart.style="margin:auto;background-color: #e56717;color: white;border: none;padding: 10px 10px;border-radius: 15px;cursor: pointer;transition: all 0.3s ease;margin-top: 1rem;width: 80%;"
+        addtocart.style="margin:auto;background-color: #e56717;font-size: 1rem;color: white;border: none;padding: 10px 10px;border-radius: 15px;cursor: pointer;transition: all 0.3s ease;margin-top: 1rem;width: 80%;"
         addtocart.innerHTML="Add to Cart"
         
         let deleteimg = document.createElement("img")
@@ -116,7 +116,6 @@ function displayxiaomiPhonesProduct (ele,index){
         div.appendChild(names)
         div.appendChild(prices)
         div.appendChild(addtocart)
-
         div.appendChild(deleteimg)
         
         grid.appendChild(div)
@@ -132,6 +131,25 @@ function displayxiaomiPhonesProduct (ele,index){
         
         }
         
+        // Add to cart option 
+        
+        addtocart.addEventListener("click",()=>{
+        
+            console.log(xiaomiPhones[index].image);
+            console.log(xiaomiPhones[index].name);
+            console.log(xiaomiPhones[index].price);
+
+            let getimage = xiaomiPhones[index].image
+            let getname = xiaomiPhones[index].name
+            let getprice = xiaomiPhones[index].price
+        
+            let  addtocartList = {revimage:getimage,revname:getname,revprice:getprice}
+
+            localStorage.setItem("addtocartDetails",JSON.stringify(addtocartList))
+        
+        })
+
+
         // delete function
         
         deleteimg.addEventListener("click",()=>{
@@ -177,6 +195,9 @@ logout.addEventListener("click",()=> {
     localStorage.removeItem("loggedIn");
     window.location.href = "login.html";
 })
+
+
+
 
 
 
