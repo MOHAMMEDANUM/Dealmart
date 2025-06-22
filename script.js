@@ -112,7 +112,6 @@ function displayxiaomiPhonesProduct (ele,index){
 
             addtocartList.push(newItem);
             localStorage.setItem("addtocartDetails", JSON.stringify(addtocartList));
-            alert("Item added to cart!");
             window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
         });
 
