@@ -1,39 +1,3 @@
-// // Add to cart functionality
-
-// let addToCartButtons = document.querySelectorAll('.add-to-cart');
-// let addToCartName = document.getElementById("name-added");
-// let addToCartPrice = document.getElementById("price-added");
-// let addToCartButton=document.getElementById("atc")
-
-
-
-
-// // Function to add items to the cart for xiomi13
-// let imgs = document.getElementById("")
-// let names = document.getElementById("name")
-// let prices =document.getElementById("price")
-
-// // Add to cart array
-
-// const addToCart = [
-
-//     {
-//         name  : names.innerText,
-//         price :  prices.innerText,
-//     }
-// ]
-
-
-
-// let cartFunctionXiomi13 = () => {
-//     console.log("dhasjhbkjdb")    
-//     addToCartName.innerText=names.innerText
-//     addToCartPrice.innerText=prices.innerText
-// }
-// addToCartButton.addEventListener('click',cartFunctionXiomi13)
-
-
-
 // XiaomiPhones setection
 
 const grid = document.querySelector(".grid");
@@ -133,21 +97,25 @@ function displayxiaomiPhonesProduct (ele,index){
         
         // Add to cart option 
         
-        addtocart.addEventListener("click",()=>{
-        
-            console.log(xiaomiPhones[index].image);
-            console.log(xiaomiPhones[index].name);
-            console.log(xiaomiPhones[index].price);
+        addtocart.addEventListener("click", () => {
+            let addtocartList = JSON.parse(localStorage.getItem("addtocartDetails")) || [];
 
-            let getimage = xiaomiPhones[index].image
-            let getname = xiaomiPhones[index].name
-            let getprice = xiaomiPhones[index].price
-        
-            let  addtocartList = {revimage:getimage,revname:getname,revprice:getprice}
+            const getimage = xiaomiPhones[index].image;
+            const getname = xiaomiPhones[index].name;
+            const getprice = xiaomiPhones[index].price;
 
-            localStorage.setItem("addtocartDetails",JSON.stringify(addtocartList))
-        
-        })
+            const newItem = {
+                img: getimage,
+                name: getname,
+                price: getprice
+            };
+
+            addtocartList.push(newItem);
+            localStorage.setItem("addtocartDetails", JSON.stringify(addtocartList));
+            alert("Item added to cart!");
+            window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+        });
+
 
 
         // delete function
