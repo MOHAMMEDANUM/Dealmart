@@ -111,22 +111,22 @@ function renderElectronics() {
         
         let image = prompt("Enter image path:");
         let href = prompt("Enter href path:");
-    let name = prompt("Enter product name:");
-    let price = prompt("Enter price:");
+        let name = prompt("Enter product name:");
+        let price = prompt("Enter price:");
 
-    if (!image || !href || !name || !price) {
-        alert("All fields are required!");
-        return;
-    }
+        if (!image || !href || !name || !price) {
+            alert("All fields are required!");
+            return;
+        }
 
-    // Create new product object with string values
-    let newProduct = { image, href, name, price };
-    
-    // Push to array and update local storage
-    electronics.push(newProduct);
-    updatelocalStorage();
-    renderElectronics();
-});
+        // Create new product object with string values
+        let newProduct = { image, href, name, price };
+        
+        // Push to array and update local storage
+        electronics.push(newProduct);
+        updatelocalStorage();
+        renderElectronics();
+    });
 
 
 

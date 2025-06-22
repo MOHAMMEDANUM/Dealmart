@@ -37,6 +37,7 @@
 // XiaomiPhones setection
 
 const grid = document.querySelector(".grid");
+
 const addBtn = document.querySelector("#add") 
 
 let xiaomiPhones = [
@@ -74,14 +75,14 @@ let xiaomiPhones = [
 ]
 
 
-// function updatelocalStorage(){
-//     localStorage.setItem("xiaomiPhonesProducts",JSON.stringify(xiaomiPhones))
-// }
+function updatelocalStorage(){
+    localStorage.setItem("xiaomiPhonesProducts",JSON.stringify(xiaomiPhones))
+}
 
-// function renderxiaomiPhones() {
-//     grid.innerHTML = "";
-//       xiaomiPhones.forEach((ele, index) => displayxiaomiPhonesProduct(ele, index));
-// }
+function renderxiaomiPhones() {
+    grid.innerHTML = "";
+      xiaomiPhones.forEach((ele, index) => displayxiaomiPhonesProduct(ele, index));
+}
 
 function displayxiaomiPhonesProduct (ele,index){
         const {name,price,image,href}=ele
@@ -121,15 +122,15 @@ function displayxiaomiPhonesProduct (ele,index){
         grid.appendChild(div)
         
         // ✅ Check login state
-        // if (localStorage.getItem("loggedIn") == "true") {
-        //     deleteimg.style="margin:auto;margin-top:1rem;display:block"
-        //     addBtn.style="display:block"
-        // }
-        // else{
-        //     deleteimg.style="display:none"
-        //     addBtn.style="display:none"
+        if (localStorage.getItem("loggedIn") == "true") {
+            deleteimg.style="margin:auto;margin-top:1rem;display:block"
+            addBtn.style="display:block"
+        }
+        else{
+            deleteimg.style="display:none"
+            addBtn.style="display:none"
         
-        // }
+        }
         
         // delete function
         
@@ -157,28 +158,25 @@ function displayxiaomiPhonesProduct (ele,index){
         if (!image || !href || !name || !price) {
             alert("All fields are required!");
             return;
-    }
+        }
 
-    // Create new product object with string values
-    let newxiaomiPhonesProduct = { image, href, name, price };
-    
-    // Push to array and update local storage
-    xiaomiPhones.push(newxiaomiPhonesProduct);
-    updatelocalStorage();
-    renderElectronics();
-});
+        // Create new product object with string values
+        let newxiaomiPhonesProduct = { image, href, name, price };
+        
+        // Push to array and update local storage
+        xiaomiPhones.push(newxiaomiPhonesProduct);
+        updatelocalStorage();
+        renderxiaomiPhones();
+    });
 
+// Logout function
 
+const logout=document.querySelector("#logout")
 
-
-// // Logout function
-
-// const logout=document.querySelector("#logout")
-
-// logout.addEventListener("click",()=> {
-//     localStorage.removeItem("loggedIn");
-//     window.location.href = "login.html";
-// })
+logout.addEventListener("click",()=> {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+})
 
 
 
