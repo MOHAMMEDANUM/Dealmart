@@ -55,9 +55,8 @@ function displayxiaomiPhonesProduct (ele,index){
         img.style="width: 100%;max-height: 220px;object-fit: contain;border-radius: 10px;margin-bottom: 5px;"
         img.src=image;
         
-        let names=document.createElement("a")
+        let names=document.createElement("p")
         names.style="text-decoration:none;color:black;font-size:1.1rem;margin-top: 1rem;margin: 0.5rem 0 0.2rem;font-weight: bold;"
-        names.href=href
         names.innerHTML=name
         
         let prices = document.createElement("button")
