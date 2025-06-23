@@ -13,6 +13,13 @@ function renderAddToCart() {
     cartmsg.innerText = "🛒 Your Cart is Empty";
     cartmsg.style = "text-align:center;color:rgba(208, 14, 53, 0.877);";
     addtocart.appendChild(cartmsg);
+
+    // Remove total price box if it exists
+    const oldTotal = document.querySelector(".total-price");
+    if (oldTotal) oldTotal.remove();
+
+
+
     return; // Exit the function early
   }
 
@@ -37,11 +44,49 @@ function renderAddToCart() {
     price.innerText = ele.price;
     price.style = "margin:auto;color: white;font-size: 1.1rem;background-color:darkslategrey;padding: 0.5rem 0;border-radius: 15px;width: 80%;border:none;";
     
-    let prices=price.innerHTML;
-    prices=prices.substring(1,prices.length)
-    prices=Number(prices)
-    total += prices
-    console.log(total);
+    const qty = ele.quantity || 1;
+    const priceValue = Number(ele.price.replace('$', ''));
+    const totalItemPrice = qty * priceValue;
+    total += totalItemPrice;
+
+    const qtyControls = document.createElement("div");
+    qtyControls.style = "display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0;";
+
+    const minusBtn = document.createElement("button");
+    minusBtn.innerText = "−";
+    minusBtn.style = "padding:5px 10px;font-size:1.2rem;background-color:darkslategrey;color:white;border:none;border-radius:8px;cursor:pointer;";
+
+    const qtyText = document.createElement("span");
+    qtyText.innerText = qty;
+    qtyText.style = "font-size:1.1rem;font-weight:bold;";
+
+    const plusBtn = document.createElement("button");
+    plusBtn.innerText = "+";
+    plusBtn.style = "padding:5px 10px;font-size:1.2rem;background-color:darkslategrey;color:white;border:none;border-radius:8px;cursor:pointer;";
+
+    qtyControls.appendChild(minusBtn);
+    qtyControls.appendChild(qtyText);
+    qtyControls.appendChild(plusBtn);
+
+    // functionality for adding (+) items
+
+    plusBtn.addEventListener("click",()=>{
+
+      cartItems[index].quantity= (cartItems[index].quantity || 1 )+1;
+      localStorage.setItem("addtocartDetails",JSON.stringify(cartItems))
+      renderAddToCart();
+    })
+
+    // functionality for substracting (-) items
+
+    minusBtn.addEventListener("click", () => {
+      if ((cartItems[index].quantity || 1) > 1) {
+        cartItems[index].quantity -= 1;
+        localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
+        renderAddToCart();
+      }
+    });
+
     
     // Delete funtion
     
@@ -55,11 +100,13 @@ function renderAddToCart() {
     });
 
 
-    
     div.appendChild(img);
     div.appendChild(names);
     div.appendChild(price);
     div.appendChild(removeBtn);
+    div.appendChild(qtyControls);
+
+
 
     addtocart.appendChild(div);
 

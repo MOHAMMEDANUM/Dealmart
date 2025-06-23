@@ -97,22 +97,42 @@ function displayxiaomiPhonesProduct (ele,index){
         // Add to cart option 
         
         addtocart.addEventListener("click", () => {
-            let addtocartList = JSON.parse(localStorage.getItem("addtocartDetails")) || [];
+            let cartItems = JSON.parse(localStorage.getItem("addtocartDetails")) || [];
 
             const getimage = xiaomiPhones[index].image;
             const getname = xiaomiPhones[index].name;
             const getprice = xiaomiPhones[index].price;
 
-            const newItem = {
-                img: getimage,
-                name: getname,
-                price: getprice
-            };
+                    // Check if item already exists
+            let existingItem = cartItems.find(item => item.name === getname);
 
-            addtocartList.push(newItem);
-            localStorage.setItem("addtocartDetails", JSON.stringify(addtocartList));
+            if (existingItem) {
+                // If found, increase quantity
+                existingItem.quantity = (existingItem.quantity || 1) + 1;
+            } else {
+                // If not found, add new with quantity 1
+                cartItems.push({
+                    img: getimage,
+                    name: getname,
+                    price: getprice,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
             window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
         });
+
+        //     const newItem = {
+        //         img: getimage,
+        //         name: getname,
+        //         price: getprice
+        //     };
+
+        //     addtocartList.push(newItem);
+        //     localStorage.setItem("addtocartDetails", JSON.stringify(addtocartList));
+        //     window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+        // });
 
 
 
