@@ -30,7 +30,7 @@ function renderAddToCart() {
     
     const div = document.createElement("div");
     div.id = "product";
-    div.style = "display:grid;background: #fff;border-radius: 15px;padding: 1rem;text-align: center;border: 2px solid darkslategrey;cursor: pointer;margin: 20px;";
+    div.style = "display:grid;background: #fff;border-radius: 15px;padding: 1rem;text-align: center;border: 2px solid darkslategrey;cursor: pointer;margin: 0 20px;"
     
     const img = document.createElement("img");
     img.src = ele.img;
@@ -50,7 +50,7 @@ function renderAddToCart() {
     total += totalItemPrice;
 
     const qtyControls = document.createElement("div");
-    qtyControls.style = "display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0;";
+    qtyControls.style = "display:flex;align-items:center;justify-content:center;gap:10px;margin:15px 0;";
 
     const minusBtn = document.createElement("button");
     minusBtn.innerText = "−";
@@ -105,8 +105,6 @@ function renderAddToCart() {
     div.appendChild(price);
     div.appendChild(removeBtn);
     div.appendChild(qtyControls);
-
-
 
     addtocart.appendChild(div);
 
