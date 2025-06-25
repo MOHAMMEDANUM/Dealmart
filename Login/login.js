@@ -16,14 +16,9 @@ submitBtn.addEventListener("click",()=>{
 
         // ✅ Redirect to electronics page
         window.location.href = "F:/WEB PROJECTS/Dealmart/index.html";
-        
-        deleteimg.style="display:grid"
-        addBtn.style="display:block"
     }
     else{
         window.location.href = "F:/WEB PROJECTS/Dealmart/index.html";
         
     }
-
-
 })
