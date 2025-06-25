@@ -33,7 +33,7 @@ function renderAddToCart() {
     div.style = "display:grid;background: #fff;border-radius: 15px;padding: 1rem;text-align: center;border: 2px solid darkslategrey;cursor: pointer;margin: 0 20px;"
     
     const img = document.createElement("img");
-    img.src = ele.img;
+    img.src = ele.image || ele.img; // Use image or img property
     img.style = "width: 100%;max-height: 220px;object-fit: contain;border-radius: 10px;margin-bottom: 5px;";
     
     const names = document.createElement("p");

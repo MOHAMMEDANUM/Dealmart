@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xiaomi Mobiles Phones |Smart Phone  | DealMart</title>
-  <link rel="icon" href="./assets/photo/ChatGPT Image Apr 25, 2025, 06_06_07 PM.png">
+  <title>OnePlus Mobiles Phones |Smart Phone  | DealMart</title>
+  <link rel="icon" href="">
   <link rel="stylesheet" href="F:\WEB PROJECTS\Dealmart\style.css">
   
 
@@ -31,56 +31,71 @@
 <div class="title">OnePlus Mobiles</div>
 
 <div class="grid">
-  <div class="product">
-    <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Smartphone">
-    <p>OnePlus 11 5G</p>
-    <div class="price">$699</div><br>
-    <button id="atc">Add to Cart</button><br><br>
-    <button id="bn">Buy Now</button>
-  </div>
-  <div class="product">
-    <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Laptop">
-    <p>OnePlus 11R 5G</p>
-    <div class="price">$799</div><br>
-    <button id="atc">Add to Cart</button><br><br>
-    <button id="bn">Buy Now</button>
-  </div>
-  <div class="product">
-    <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Smartwatch">
-    <p id="sw">OnePlus 12 5G</p>
-    <div class="price">$999</div><br>
-    <button id="atc">Add to Cart</button><br><br>
-    <button id="bn">Buy Now</button>
-  </div>
-  <div class="product">
-    <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Headphones">
-    <p id="head">OnePlus 12R 5G</p>
-    <div class="price">$1499 </div><br>
-    <button id="atc">Add to Cart</button><br><br>
-    <button id="bn">Buy Now</button>
-  </div>
-  <div class="product">
-    <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Tablet">
-    <p>Xiaomi 14 Ultra</p>
-    <div class="price">$1299</div><br>
-    <button id="atc">Add to Cart</button><br><br>
-    <button id="bn">Buy Now</button>
-  </div>
 </div>
 
-<!-- <script>document.addEventListener("DOMContentLoaded", () => {
+<script src="F:\WEB PROJECTS\Dealmart\script.js"></script>
+
+
+</body>
+</html>
+
+
+
+<!-- <div class="product">
+  <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Smartphone">
+  <p>OnePlus 11 5G</p>
+  <div class="price">$699</div><br>
+  <button id="atc">Add to Cart</button><br><br>
+  <button id="bn">Buy Now</button>
+</div>
+<div class="product">
+  <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Laptop">
+  <p>OnePlus 11R 5G</p>
+  <div class="price">$799</div><br>
+  <button id="atc">Add to Cart</button><br><br>
+  <button id="bn">Buy Now</button>
+</div>
+<div class="product">
+  <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Smartwatch">
+  <p id="sw">OnePlus 12 5G</p>
+  <div class="price">$999</div><br>
+  <button id="atc">Add to Cart</button><br><br>
+  <button id="bn">Buy Now</button>
+</div>
+<div class="product">
+  <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Headphones">
+  <p id="head">OnePlus 12R 5G</p>
+  <div class="price">$1499 </div><br>
+  <button id="atc">Add to Cart</button><br><br>
+  <button id="bn">Buy Now</button>
+</div>
+<div class="product">
+  <img src="https://img.icons8.com/?size=100&id=11409&format=png&color=000000" alt="Tablet">
+  <p>OnePlus 14 Ultra</p>
+  <div class="price">$1299</div><br>
+  <button id="atc">Add to Cart</button><br><br>
+  <button id="bn">Buy Now</button>
+</div> -->
+
+
+
+
+
+
+<!-- 
+<script>document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".grid");
   const addToCartButtons = grid.querySelectorAll("button#atc");
-
+  
   addToCartButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const productDiv = btn.closest(".product");
       const img = productDiv.querySelector("img").src;
       const name = productDiv.querySelector("p").innerText.trim();
       const price = productDiv.querySelector(".price").innerText.trim();
-
+      
       let cartItems = JSON.parse(localStorage.getItem("addtocartDetails")) || [];
-
+      
       // ✅ Check if the item already exists
       const existingItem = cartItems.find(item => item.name === name && item.price === price);
 
@@ -91,16 +106,12 @@
         // Else add new
         cartItems.push({ img, name, price, quantity: 1 });
       }
-
+      
       localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
-
+      
       // Optional: Navigate to Add to Cart page
       window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
     });
   });
 });
 </script> -->
-
-
-</body>
-</html>
