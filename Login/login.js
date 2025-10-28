@@ -15,10 +15,10 @@ submitBtn.addEventListener("click",()=>{
         localStorage.setItem("loggedIn", "true");
 
         // ✅ Redirect to electronics page
-        window.location.href = "F:/WEB PROJECTS/Dealmart/index.html";
+        window.location.href = "Dealmart\index.html";
     }
     else{
-        window.location.href = "F:/WEB PROJECTS/Dealmart/index.html";
+        window.location.href = "Dealmart\index.html";
         
     }
 })

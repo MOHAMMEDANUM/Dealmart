@@ -271,7 +271,7 @@ function renderPhones() {
     img.src = product.image;
     img.alt = product.name;
     img.onerror = () => {
-      img.src = "F:/WEB PROJECTS/Dealmart/assets/photo/default.png";
+      img.src = "Dealmart\assets\photo\default.png";
     };
     img.style = `
       width: 100%;
@@ -319,7 +319,7 @@ function renderPhones() {
     `;
 
     const deleteImg = document.createElement("img");
-    deleteImg.src = "F:/WEB PROJECTS/Dealmart/assets/photo/icons8-delete-48.png";
+    deleteImg.src = "Dealmart\assets\photo\icons8-delete-48.png";
     deleteImg.alt = "delete";
     deleteImg.style = `
       margin: auto;
@@ -344,7 +344,7 @@ function renderPhones() {
         cartItems.push({ ...product, quantity: 1 });
       }
       localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
-      window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+        window.location.href = "Dealmart\AddToCart.html";
     });
 
     div.appendChild(img);
@@ -497,7 +497,7 @@ if (logout) {
 
     // ⏳ Delay redirect to allow UI to update
     setTimeout(() => {
-      window.location.href = "F:/WEB PROJECTS/Dealmart/Login/login.html";
+      window.location.href = "Dealmart\Login\login.html";
     }, 100); // 100ms is enough
   });
 }

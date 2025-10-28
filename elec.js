@@ -8,31 +8,31 @@ let electronics = JSON.parse(localStorage.getItem("electronicsProducts")) || [
 
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/SmartPhones/SmartPhones.html",
+        href:"Dealmart\Electronics\SmartPhones\SmartPhones.html",
         name:"Smartphones",
         price:"$299 - $699"
     },
     {
         image :"https://img.icons8.com/ios/100/laptop.png",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/Laptop/Laptop.html",
+        href:"Dealmart\Electronics\Laptop\Laptop.html",
         name:"Laptop",
         price:"$699 - $1199"
     },
     {
         image :"https://img.icons8.com/ios/100/apple-watch-apps.png",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/SmartWatches/SmartWatches.html",
+        href:"Dealmart\Electronics\SmartWatches\SmartWatches.html",
         name:"Smartwatch",
         price:"$99 - $399"
     },
     {
         image :"https://img.icons8.com/ios/100/airpods-pro.png",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/HeadPhones/HeadPhones.html",
+        href:"Dealmart\Electronics\HeadPhones\HeadPhones.html",
         name:"Headphones",
         price:"$59 - $299"
     },
     {
         image :"https://img.icons8.com/?size=100&id=2318&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/Tablet/Tablet.html",
+        href:"Dealmart\Electronics\Tablet\Tablet.html",
         name:"Tablet",
         price:"$199 - $499"
     }
@@ -67,7 +67,7 @@ function renderElectronics() {
         
         let deleteimg = document.createElement("img")
         deleteimg.style="margin:auto;margin-top:1rem;display:none"
-        deleteimg.src="F:/WEB PROJECTS/Dealmart/assets/photo/icons8-delete-48.png"
+        deleteimg.src="Dealmart\assets\photo\icons8-delete-48.png"
         
         let div = document.createElement("div")
         div.id="product"

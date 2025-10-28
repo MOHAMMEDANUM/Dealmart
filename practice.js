@@ -8,31 +8,31 @@ let xiaomiPhones = JSON.parse(localStorage.getItem("xiaomiPhonesProducts")) || [
 
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/SmartPhones/SmartPhones.html",
+        href:"Dealmart\Electronics\SmartPhones\SmartPhones.html",
         name:"Xiaomi 13",
         price:"$699"
     },
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/Laptop/Laptop.html",
+        href:"Dealmart\Electronics\Laptop\Laptop.html",
         name:"Xiaomi 13 Pro",
         price:"$799"
     },
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/SmartWatches/SmartWatches.html",
+        href:"Dealmart\Electronics\SmartWatches\SmartWatches.html",
         name:"Xiaomi 13T Pro",
         price:"$999"
     },
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/HeadPhones/HeadPhones.html",
+        href:"Dealmart\Electronics\HeadPhones\HeadPhones.html",
         name:"Xiaomi 14 Pro",
         price:"$1299"
     },
     {
         image :"https://img.icons8.com/?size=100&id=11409&format=png&color=000000",
-        href:"F:/WEB PROJECTS/Dealmart/Electronics/Tablet/Tablet.html",
+        href:"Dealmart\Electronics\Tablet\Tablet.html",
         name:"Xiaomi 14 Ultra",
         price:"$1499"
     }
@@ -69,7 +69,7 @@ function displayxiaomiPhonesProduct (ele,index){
         
         let deleteimg = document.createElement("img")
         deleteimg.style="margin:auto;margin-top:1rem;display:none"
-        deleteimg.src="F:/WEB PROJECTS/Dealmart/assets/photo/icons8-delete-48.png"
+        deleteimg.src="Dealmart\assets\photo\icons8-delete-48.png"
         
         let div = document.createElement("div")
         div.id="product"
@@ -120,7 +120,7 @@ function displayxiaomiPhonesProduct (ele,index){
             }
 
             localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
-            window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+            window.location.href = "Dealmart\AddToCart.html";
         });
 
         //     const newItem = {
@@ -131,7 +131,7 @@ function displayxiaomiPhonesProduct (ele,index){
 
         //     addtocartList.push(newItem);
         //     localStorage.setItem("addtocartDetails", JSON.stringify(addtocartList));
-        //     window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+            //     window.location.href = "Dealmart\AddToCart.html";
         // });
 
 
