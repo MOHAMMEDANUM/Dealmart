@@ -503,3 +503,195 @@ if (logout) {
 }
 
 
+
+
+
+
+
+// // 📦 Unified Product Management with File Upload Support
+
+// // 📌 Wait for DOM to be fully loaded
+// document.addEventListener("DOMContentLoaded", () => {
+//   const grid = document.querySelector(".grid");
+//   const addBtn = document.querySelector("#addBtn");
+//   const brand = document.title.includes("Xiaomi") ? "Xiaomi" :
+//                 document.title.includes("OnePlus") ? "OnePlus" :
+//                 document.title.includes("Pixel") ? "Pixel" :
+//                 document.title.includes("iPhone") ? "iPhone" :
+//                 document.title.includes("Samsung") ? "Samsung" : "";
+
+//   const storageKey = brand + "Phones";
+//   let products = JSON.parse(localStorage.getItem(storageKey)) || getDefaultPhones(brand);
+
+//   // ✅ Show/hide admin addBtn on load
+//   if (addBtn) addBtn.style.display = localStorage.getItem("loggedIn") === "true" ? "block" : "none";
+
+//   // 🧠 Default phones fallback
+//   function getDefaultPhones(brand) {
+//     const data = {
+//       Xiaomi: [ { name: "Xiaomi 13", price: "$699", image: "https://img.icons8.com/?size=100&id=11409&format=png&color=000000" } ],
+//       OnePlus: [ { name: "OnePlus 11", price: "$799", image: "https://img.icons8.com/?size=100&id=11409&format=png&color=000000" } ],
+//       Pixel: [ { name: "Pixel 8", price: "$899", image: "https://img.icons8.com/?size=100&id=11409&format=png&color=000000" } ],
+//       iPhone: [ { name: "iPhone 14", price: "$999", image: "https://img.icons8.com/?size=100&id=11409&format=png&color=000000" } ],
+//       Samsung: [ { name: "Galaxy S21", price: "$799", image: "https://img.icons8.com/?size=100&id=11409&format=png&color=000000" } ]
+//     };
+//     return data[brand] || [];
+//   }
+
+//   // 📲 Render product cards
+//   function renderPhones() {
+//     grid.innerHTML = "";
+//     products.forEach((product, index) => {
+//       const div = document.createElement("div");
+//       div.id = "product";
+//       div.style = `
+//         display: grid;
+//         background: #fff;
+//         border-radius: 15px;
+//         padding: 1rem;
+//         text-align: center;
+//         border: 1px solid darkslategrey;
+//         cursor: pointer;
+//         margin-left: 20px;
+//         margin-bottom: 20px;
+//       `;
+
+//       const img = document.createElement("img");
+//       img.src = product.image;
+//       img.alt = product.name;
+//       img.onerror = () => {
+//         img.src = "F:/WEB PROJECTS/Dealmart/assets/photo/default.png";
+//       };
+//       img.style = `
+//         width: 100%;
+//         max-height: 220px;
+//         object-fit: contain;
+//         border-radius: 10px;
+//         margin-bottom: 5px;
+//       `;
+
+//       const nameP = document.createElement("p");
+//       nameP.innerText = product.name;
+//       nameP.style = `
+//         font-size: 1.1rem;
+//         font-weight: bold;
+//         margin: 0.5rem 0 0.2rem;
+//       `;
+
+//       const priceBtn = document.createElement("button");
+//       priceBtn.innerText = product.price;
+//       priceBtn.style = `
+//         margin: auto;
+//         color: white;
+//         background-color: darkslategrey;
+//         border: none;
+//         padding: 10px;
+//         border-radius: 15px;
+//         width: 80%;
+//         font-size: 1.1rem;
+//         margin-top: 0.5rem;
+//       `;
+
+//       const addToCartBtn = document.createElement("button");
+//       addToCartBtn.innerText = "Add to Cart";
+//       addToCartBtn.style = `
+//         margin: auto;
+//         background-color: #e56717;
+//         font-size: 1rem;
+//         color: white;
+//         border: none;
+//         padding: 10px;
+//         border-radius: 15px;
+//         margin-top: 0.8rem;
+//         width: 80%;
+//         cursor: pointer;
+//       `;
+//       addToCartBtn.addEventListener("click", () => {
+//         let cartItems = JSON.parse(localStorage.getItem("addtocartDetails")) || [];
+//         const exists = cartItems.find(item => item.name === product.name);
+//         if (exists) {
+//           exists.quantity = (exists.quantity || 1) + 1;
+//         } else {
+//           cartItems.push({ ...product, quantity: 1 });
+//         }
+//         localStorage.setItem("addtocartDetails", JSON.stringify(cartItems));
+//         window.location.href = "F:/WEB PROJECTS/Dealmart/AddToCart.html";
+//       });
+
+//       const deleteImg = document.createElement("img");
+//       deleteImg.src = "F:/WEB PROJECTS/Dealmart/assets/photo/icons8-delete-48.png";
+//       deleteImg.alt = "delete";
+//       deleteImg.style = `
+//         margin: auto;
+//         margin-top: 1rem;
+//         width: 40px;
+//         cursor: pointer;
+//         display: ${localStorage.getItem("loggedIn") === "true" ? "block" : "none"};
+//       `;
+//       deleteImg.addEventListener("click", () => {
+//         products.splice(index, 1);
+//         localStorage.setItem(storageKey, JSON.stringify(products));
+//         renderPhones();
+//       });
+
+//       div.appendChild(img);
+//       div.appendChild(nameP);
+//       div.appendChild(priceBtn);
+//       div.appendChild(addToCartBtn);
+//       div.appendChild(deleteImg);
+//       grid.appendChild(div);
+//     });
+//   }
+
+//   // 🆕 Add Product Handler (with file upload)
+//   if (addBtn) {
+//     addBtn.addEventListener("click", () => {
+//       const formHTML = `
+//         <div id="formPopup" style="position:fixed;top:10%;left:50%;transform:translateX(-50%);background:white;padding:20px;border:2px solid #ccc;border-radius:10px;z-index:1000">
+//           <h3>Add Product</h3>
+//           <input type="file" id="productImage" accept="image/*"><br><br>
+//           <input type="text" id="productName" placeholder="Product Name"><br><br>
+//           <input type="text" id="productPrice" placeholder="Product Price"><br><br>
+//           <button id="uploadProductBtn">Add Product</button>
+//           <button onclick="document.getElementById('formPopup').remove()">Cancel</button>
+//         </div>
+//       `;
+//       document.body.insertAdjacentHTML("beforeend", formHTML);
+
+//       document.querySelector("#uploadProductBtn").addEventListener("click", () => {
+//         const name = document.querySelector("#productName").value;
+//         const price = document.querySelector("#productPrice").value;
+//         const file = document.querySelector("#productImage").files[0];
+
+//         if (!file || !name || !price) {
+//           alert("All fields are required!");
+//           return;
+//         }
+
+//         const reader = new FileReader();
+//         reader.onload = function (e) {
+//           const base64Image = e.target.result;
+//           products.push({ name, price, image: base64Image });
+//           localStorage.setItem(storageKey, JSON.stringify(products));
+//           renderPhones();
+//           document.getElementById('formPopup').remove();
+//         };
+//         reader.readAsDataURL(file);
+//       });
+//     });
+//   }
+
+//   // 🚀 Initial render
+//   if (brand) renderPhones();
+
+//   // 🔓 Logout logic
+//   const logout = document.querySelector("#logout");
+//   if (logout) {
+//     logout.addEventListener("click", () => {
+//       localStorage.removeItem("loggedIn");
+//       if (addBtn) addBtn.style.display = "none";
+//       renderPhones();
+//       window.location.href = "F:/WEB PROJECTS/Dealmart/Login/login.html";
+//     });
+//   }
+// });
